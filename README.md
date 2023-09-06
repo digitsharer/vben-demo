@@ -167,3 +167,7 @@ If you think this project is helpful to you, you can help the author buy a cup o
 ## License
 
 [MIT © Vben-2020](./LICENSE)
+
+## 网站建设思路
+***1.建设首页***
+首页功能：主要导航各类解决方案

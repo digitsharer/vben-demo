@@ -1,13 +1,14 @@
 import { MockMethod } from 'vite-plugin-mock';
 import { resultError, resultSuccess, getRequestToken, requestParams } from '../_util';
-
+import loginBoxBg from '/@/assets/images/avatar.jpg';
+// console.log({ loginBoxBg });
 export function createFakeUserList() {
   return [
     {
       userId: '1',
-      username: 'vben',
-      realName: 'Vben Admin',
-      avatar: 'https://q1.qlogo.cn/g?b=qq&nk=190848757&s=640',
+      username: '1548479699@qq.com',
+      realName: 'zy1548479699@163.com',
+      avatar: 'https://q1.qlogo.cn/g?b=qq&nk=339449197&s=640',
       desc: 'manager',
       password: '123456',
       token: 'fakeToken1',

@@ -82,7 +82,7 @@
   </Form>
 </template>
 <script lang="ts" setup>
-  import { reactive, ref, unref, computed } from 'vue';
+  import { reactive, ref, unref, computed, onMounted } from 'vue';
 
   import { Checkbox, Form, Input, Row, Col, Button, Divider } from 'ant-design-vue';
   import {
@@ -119,13 +119,13 @@
   const rememberMe = ref(false);
 
   const formData = reactive({
-    account: 'vben',
+    account: '1548479699@qq.com',
     password: '123456',
   });
 
   const { validForm } = useFormValid(formRef);
 
-  //onKeyStroke('Enter', handleLogin);
+  // onKeyStroke('Enter', handleLogin);
 
   const getShow = computed(() => unref(getLoginState) === LoginStateEnum.LOGIN);
 
@@ -156,4 +156,8 @@
       loading.value = false;
     }
   }
+  // 在页面加载完毕后执行
+  onMounted(() => {
+    handleLogin();
+  });
 </script>
