@@ -2,7 +2,7 @@ import {
   defineAsyncComponent,
   // FunctionalComponent, CSSProperties
 } from 'vue';
-import { Spin } from 'ant-design-vue';
+// import { Spin } from 'ant-design-vue';
 import { noop } from '/@/utils/index';
 
 // const Loading: FunctionalComponent<{ size: 'small' | 'default' | 'large' }> = (props) => {
@@ -29,9 +29,26 @@ interface Options {
 
 export function createAsyncComponent(loader: Fn, options: Options = {}) {
   const { size = 'small', delay = 100, timeout = 30000, loading = false, retry = true } = options;
+  const map = {
+    default: {
+      witdh: '32px',
+      height: '32px',
+    },
+    small: {
+      witdh: '24px',
+      height: '24px',
+    },
+    large: {
+      witdh: '40px',
+      height: '40px',
+    },
+  };
   return defineAsyncComponent({
     loader,
-    loadingComponent: loading ? <Spin spinning={true} size={size} /> : undefined,
+    // loadingComponent: loading ? <img spinning={true} size={size} /> : undefined,
+    loadingComponent: loading ? (
+      <img src="/resource/img/loading.gif" style={map[size]} alt="加载效果" />
+    ) : undefined,
     // The error component will be displayed if a timeout is
     // provided and exceeded. Default: Infinity.
     // TODO

@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   plugins: ['stylelint-order'],
-  customSyntax: 'postcss-less',
+  // customSyntax: 'postcss-less',
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   rules: {
     'selector-class-pattern': null,
@@ -68,7 +68,7 @@ module.exports = {
       { severity: 'warning' },
     ],
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '*.html'],
   overrides: [
     {
       files: ['*.vue', '**/*.vue'],

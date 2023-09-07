@@ -8,14 +8,12 @@
   >
     <div :class="`${prefixCls}__entry`">
       <div :class="`${prefixCls}__header`">
-        <img :src="avatar" :class="`${prefixCls}__header-img`" />
-        <p :class="`${prefixCls}__header-name`">
-          {{ getRealName }}
+        <p class="text-center">
+          <img :src="avatar" :class="`${prefixCls}__header-img`" />
         </p>
       </div>
-
+      <p :class="`${prefixCls}__header-name`" class="text-center !mt-[-50px]">{{ getRealName }}</p>
       <BasicForm @register="registerForm" />
-
       <div :class="`${prefixCls}__footer`">
         <a-button type="primary" block class="mt-2" @click="handleLock">
           {{ t('layout.header.lockScreenBtn') }}

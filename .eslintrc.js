@@ -2,6 +2,16 @@
 const { defineConfig } = require('eslint-define-config');
 module.exports = defineConfig({
   root: true,
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['/@', './src'], // 根据你的项目配置自定义别名
+        ],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+      },
+    },
+  },
   env: {
     browser: true,
     node: true,
