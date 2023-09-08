@@ -49,7 +49,7 @@ export default [
   // mock user login
   {
     url: '/basic-api/login',
-    timeout: 200,
+    timeout: 0,
     method: 'post',
     response: ({ body }) => {
       const { username, password } = body;

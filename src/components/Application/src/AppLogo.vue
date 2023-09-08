@@ -6,13 +6,14 @@
   <div class="anticon" :class="getAppLogoClass" @click="goHome">
     <img src="../../../assets/images/logo.png" />
     <div class="ml-2 truncate md:opacity-100" :class="getTitleClass" v-show="showTitle">
-      {{ title }}
+      <!-- {{ title }} -->
+      山谷明月光，流萤皆彷徨。
     </div>
   </div>
 </template>
 <script lang="ts" setup>
   import { computed, unref } from 'vue';
-  import { useGlobSetting } from '/@/hooks/setting';
+  // import { useGlobSetting } from '/@/hooks/setting';
   import { useGo } from '/@/hooks/web/usePage';
   import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
   import { useDesign } from '/@/hooks/web/useDesign';
@@ -37,7 +38,7 @@
   const { prefixCls } = useDesign('app-logo');
   const { getCollapsedShowTitle } = useMenuSetting();
   const userStore = useUserStore();
-  const { title } = useGlobSetting();
+  // const { title } = useGlobSetting();
   const go = useGo();
 
   const getAppLogoClass = computed(() => [
@@ -67,9 +68,9 @@
     cursor: pointer;
     transition: all 0.2s ease;
 
-    &.light {
-      border-bottom: 1px solid @border-color-base;
-    }
+    // &.light {
+    //   border-bottom: 1px solid @border-color-base;
+    // }
 
     &.collapsed-show-title {
       padding-left: 20px;
