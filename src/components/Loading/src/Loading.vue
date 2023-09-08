@@ -6,19 +6,19 @@
     v-show="loading"
   >
     <!-- 自定义loading效果 -->
-    <!-- <Spin v-bind="$attrs" :tip="tip" :size="size" :spinning="loading" /> -->
-    <img src="/resource/img/loading.gif" v-if="loading" />
+    <Spin v-bind="$attrs" :tip="tip" :size="size" :spinning="loading" />
+    <!-- <img src="/resource/img/loading.gif" v-if="loading" /> -->
   </section>
 </template>
 <script lang="ts">
   import { PropType } from 'vue';
   import { defineComponent } from 'vue';
-  // import { Spin } from 'ant-design-vue';
+  import { Spin } from 'ant-design-vue';
   import { SizeEnum } from '/@/enums/sizeEnum';
 
   export default defineComponent({
     name: 'Loading',
-    // components: { Spin },
+    components: { Spin },
     props: {
       tip: {
         type: String as PropType<string>,

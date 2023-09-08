@@ -31,16 +31,16 @@ export function createAsyncComponent(loader: Fn, options: Options = {}) {
   const { size = 'small', delay = 100, timeout = 30000, loading = false, retry = true } = options;
   const map = {
     default: {
+      witdh: '40px',
+      height: '40px',
+    },
+    small: {
       witdh: '32px',
       height: '32px',
     },
-    small: {
-      witdh: '24px',
-      height: '24px',
-    },
     large: {
-      witdh: '40px',
-      height: '40px',
+      witdh: '48px',
+      height: '48px',
     },
   };
   return defineAsyncComponent({
